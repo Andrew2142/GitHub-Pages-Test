@@ -1,4 +1,5 @@
 
+
 body {
     margin: 0;
   }
@@ -110,7 +111,96 @@ header .logo {
     right: 170px;
 }
 
+ 
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0054a3;
+    opacity: 60%;
+    mix-blend-mode: overlay;
+   
+     
+}
+
+.text {
+    position: relative;
+    padding-top: 24vh;
+    z-index: 10;
+}
+
+.text h2 {
+    font-size: 4em;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.text h3 {
+    font-size: 3em;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1em;
+    text-transform: uppercase;
+    
+}
+
+.text p {
+    font-size: 1.1em;
+    color: #fff;
+    margin: 20px 0;
+    font-weight: 300;
+    max-width: 700px;
+}
+
+.text a {
+    display: inline-block;
+    font-size: 1em;
+    background: #fff;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #111;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.text a:hover {
+    letter-spacing: 6px;
+}
+
+.social {
+    position: absolute;
+    z-index: 10;
+    bottom: -250px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+     
+}
+
+.social li {
+    list-style: none;
+}
+
+.social li a {
+    display: inline-block;
+    margin-right: 20px;
+   
+    filter: invert(1);
+    transform: scale(0.5);
+    transition: 0.5s;
+}
+
+.social li a:hover {
+    transform: scale(0.5) translateY(-15px);
+}
 
 .menu {
     position: absolute;
@@ -147,5 +237,167 @@ header .logo {
     color: #03a9f4;
 }
 
+@media (max-width: 991px) {
 
+    .showcase,
+    .showcase header {
+        padding: 40px;
+    }
+
+    .text h2 {
+        font-size: 3em;
+    }
+
+    .text h3 {
+        font-size: 2em;
+    }
+    .text p {
+        font-size: 1em;
+         
+    }
+     
+}
+
+video{
+    filter:contrast(2);
+  filter:saturate(1.5);
+}
+
+.section1{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.section2{
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    color: white;
+
+}
+
+.reveal{
+    position: relative;
+     opacity: 0;
+     transition: all 0.8s ease-in;
+    
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+     
+}
+
+
+h4{
+    text-align: center;
+    font-weight: 500;
+    padding-left: 40vh;
+    padding-right: 40vh;
+    padding-top: 1vh;
+
+}
+
+@media (max-width: 991px) {
+
+    .showcase,
+    .showcase header {
+        padding: 40px;
+    }
+
+    .text1 h4{
+        padding-left: 2vh;
+        padding-right: 2vh;
+        padding-top: 2vh;
+        font-size: 87%;
+        font-weight: 500;
+    }
+
+
+   
+     
+}
+
+.img{
+    position:relative;
+    width: 100%;
+   height: 100%;
+     top: 0;
+     left: 0;
+     bottom: 0;
+   object-fit:cover;
+   display: block;
+   
+   
+    
+    
+}
+.h2cc{
+    position:absolute;
+    top:35%;
+    right:30%;
+    font-size: x-large;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-weight: 200;
+    text-align: center;    
+    z-index: 20;
+}
+ 
+@media (max-width: 900px ) and (max-width: 1200px) {
+
+    .showcase,
+    .showcase header {
+        padding: 40px;
+    }
+
+     .section1 h5{
+         font-size: xx-small;
+         
+         padding-left: 5vh;
+        padding-right: 7vh;
+        
+     }
+
+
+     .h2cc{
+        position:absolute;
+        top:27%;
+        right:32%;
+        font-size: large;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        font-weight: 400;
+          
+        z-index: 20;
+    }
+
+   
+    .section1{
+        padding-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    
+    }
+     
+}
+
+h5{
+    text-align: center;
+    font-weight: 500;
+    padding-left: 40vh;
+    padding-right: 40vh;
+    padding-top: 1vh;
+}
+ 
 
