@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <section class="showcase">
+    <header>
+        
+        <img src="logoblack.png" alt="" class="logo">
+        <div class="toggle "></div>
+    </header>
+    <div class="overlay"></div>
+
+    <div class="image-grid">
+        <img class="image-grid-col-2 image-grid-row-2" src="image7.jpg" alt="">
+        <img src="image2.jpg" alt="">
+        <img src="image3.jpg" alt="">
+        <img src="image4.jpg" alt="">
+        <img src="image5.jpg" alt="">
+        <img src="image6.jpg" alt="">
+        <img src="image1.jpg" alt="">
+    </div>
+</section>
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="">About</a></li>
+           
+        </ul>
+    </div>
+    
+</body>
+
+<script>
+    const menuToggle = document.querySelector('.toggle');
+const showcase = document.querySelector('.showcase');
+
+menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    showcase.classList.toggle('active');
+});
+</script>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="script.js" rel="script" />
+</head>
+<body>
+  <section class="showcase">
+      <header>
+        <img src="logowhite.png" alt="" class="logo">
+          <div class="toggle "></div>
+      </header>
+
+      <video src="explore.mp4" muted loop autoplay> </video>
+      <div class="overlay"></div>
+
+      <div class="text">
+           <h3>The Future is here</h3>
+          
+         <p>Our mission is to go above and beyond, creating the most unique photography art the world has never seen.</p>
+        <a href="#">Explore</a>
+      </div>
+      
+
+       
+  </section>
+
+  <div class="menu">
+      <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="">About</a></li>
+         
+      </ul>
+  </div>
+ 
+  <div class="text1">
+ 
+  <section class="section1">
+      <div class="container reveal">
+          
+          <h5 class="h2cc">We are evolving the industry creating new ways to express our feelings. We innovate and explore every possible field, by implementing new ideas from the team members and clients we work with, whilst listing to feedback to provide quality content, giving the best outcome in different situations.
+          </h5>
+          <img src="Cameraman.jpg" alt="" class="img">
+      </div>
+       
+    
+  </section>
+
+  <section class ="section2">
+      <div class="container reveal">
+          <h2>Help us fight climate change</h2>
+          <h4>Every donation counts, as we explore the depths of climate change and reveal to the world its devastating effects, we spread awareness and show people the devestating impact it is having.
+            You can go HERE, to make a difference the world is needing. 
+          </h4>
+          
+      </div>
+
+  </section>
+</body>
+ 
+</div>
+
+
+<script>
+    const menuToggle = document.querySelector('.toggle');
+const showcase = document.querySelector('.showcase');
+
+menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    showcase.classList.toggle('active');
+});
+
+window.addEventListener('scroll', reveal);
+
+function reveal(){
+    let reveals = document.querySelectorAll('.reveal');
+
+    for(let i = 0; i < reveals.length; i++){
+        let windowheight = window.innerHeight;
+        let revealtop = reveals[i].getBoundingClientRect().top
+        let revealpoint = 150;
+
+        if(revealtop < windowheight - revealpoint){
+            reveals[i].classList.add('active');
+
+        }else{
+            reveals[i].classList.remove('active');
+        }
+    }
+}
+
+
+
+</script>
+</html>
