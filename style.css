@@ -17,6 +17,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 header .logo {
@@ -312,7 +313,7 @@ h4{
     z-index: 20;
 }
  
-@media (max-width: 900px ) and (max-width: 1200px) {
+@media (min-width: 300px ){
 
     .showcase,
     .showcase header {
@@ -320,10 +321,66 @@ h4{
     }
 
      .section1 h5{
-         font-size: xx-small;
+         font-size: x-small;
          
          padding-left: 5vh;
         padding-right: 7vh;
+         
+        
+     }
+
+
+     .h2cc{
+        position:absolute;
+        top:18%;
+        right:32%;
+        font-size: large;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        font-weight: 400;
+          
+        z-index: 20;
+    }
+
+   
+    .section1{
+        padding-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    
+    }
+
+    
+     
+}
+
+h5{
+    text-align: center;
+    font-weight: 500;
+    padding-left: 40vh;
+    padding-right: 40vh;
+    padding-top: 1vh;
+}
+ 
+html { scroll-behavior: smooth; }
+
+
+@media (min-width: 600px ){
+
+    .showcase,
+    .showcase header {
+        padding: 40px;
+    }
+
+     .section1 h5{
+         font-size: large;
+         
+         padding-left: 5vh;
+        padding-right: 7vh;
+         
         
      }
 
@@ -353,12 +410,46 @@ h4{
      
 }
 
-h5{
-    text-align: center;
-    font-weight: 500;
-    padding-left: 40vh;
-    padding-right: 40vh;
-    padding-top: 1vh;
+@media (min-width: 900px ){
+
+    .showcase,
+    .showcase header {
+        padding: 40px;
+    }
+
+     .section1 h5{
+         font-size: x-large;
+         
+         padding-left: 10vh;
+        padding-right: 10vh;
+         
+        
+     }
+
+
+     .h2cc{
+        position:absolute;
+        top:35%;
+        right:40%;
+        font-size: large;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        font-weight: 400;
+          
+        z-index: 20;
+    }
+
+   
+    .section1{
+        padding-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    
+    }
+     
 }
- 
-html { scroll-behavior: smooth; }
+
+
