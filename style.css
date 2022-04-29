@@ -361,4 +361,4 @@ h5{
     padding-top: 1vh;
 }
  
-
+html { scroll-behavior: smooth; }
