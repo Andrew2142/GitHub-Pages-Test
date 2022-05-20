@@ -15,34 +15,20 @@
       <header style="padding-left: 7px;padding-right: 7px;">
         <img src="logowhite.png" alt="" class="logo">
           <div class="toggle "></div>
-      </header>
-
-      
-      
-      
-      <video src="explore.mp4" muted loop autoplay> </video>
+      </header>  
+      <video src="explore.mp4" muted loop autoplay></video>
       <div class="overlay"></div>
-
       <div class="text">
-           <h3>The Future is here</h3>
+           <h3>Random Recipe</h3>
           
-         <p>Our mission is to go above and beyond, creating the most unique photography art the world has never seen.</p>
-          
-          
-          <form class="form" id="myForm">
-          
-           <input type="file" id="inpFile">
-          <button type="submit">Submit</button>
-          
-          </form>
-          
-       
+         <p>Lets put together a random recipe for you, for some extra spice on your life.</p>
           
           
-      </div>
-      
-
-       
+         <a href="#">Explore</a>
+        <a href="#scrolldown">Explore</a>
+          
+          </form>   
+      </div>           
   </section>
 
   <div class="menu">
@@ -110,39 +96,6 @@
 
 
 <script>
-    
-    
-    
-    
-    const myForm = document.getElementById("myForm");
-    const inpFile = document.getElementById("inpFile");
-    
-    
-    myForm.addEventListener("submit", e => {
-        e.preventDefault();
-        
-        const endpoint = "upload.php";
-        const formData = new FormData();
-        
-        formData.append("inpFile", inpFile.files[0]);
-        
-        fetch(endpoint, {
-            method: "post",
-            body: formData
-
-            
-        
-        }).catch(console.error);;
-    });
-        
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     const menuToggle = document.querySelector('.toggle');
