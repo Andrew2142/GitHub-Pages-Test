@@ -1,0 +1,220 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+    <link href="script.js" rel="script" />
+    <link rel="icon" type="image/x-icon" href="logo.png">
+  
+     
+    <script src="https://kit.fontawesome.com/eb54cc5c7b.js" crossorigin="anonymous"></script>
+     </head>
+<body>
+  <section class="showcase">
+      <header style="padding-left: 7px;padding-right: 7px;">
+        <img src="logowhite.png" alt="" class="logo">
+          <div class="toggle"></div>
+      </header>  
+      <video src="explore.mp4" muted loop autoplay></video>
+      <div class="overlay"></div>
+      <div class="text">
+           <h3>Random Recipe</h3>
+         <p>Lets put together a random recipe for you, for some extra spice to your life.</p>
+      
+        <a  href="JavaScript:setTimeout(loadUrl,500)" id ="get_meal">Explore</a>
+
+
+          </form>   
+      </div>           
+  </section>
+
+  <div class="menu">
+      <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+           
+         
+      </ul>
+  </div>
+
+  <div class="text1">
+ <a href="" id="scrolldown"></a>
+  <section class="section1">
+      <div class="container reveal" id="meal" class ="row meal">
+          
+      </div>
+       
+    
+  </section>
+
+    
+
+
+
+</div>
+
+
+
+
+     
+        <section class="footer">
+            <div class="socials">
+                <a href="https://www.facebook.com/UNclimatechange" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com/UNFCCC" target="_blank"><i class="fab  fa-twitter"></i></a>
+                <a href="https://www.instagram.com/unclimatechange/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+      
+            <ul class="list">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="gallery.html" target="_blank">Gallery</a>
+                </li> 
+              
+            </ul>
+      
+            <p class="copyright">
+                 © Foodify 2022
+            </p>
+        </section>
+
+
+
+
+ 
+  
+</body>
+ 
+
+
+
+<script>
+    const get_meal_btn = document.getElementById("get_meal");
+    const meal_container = document.getElementById("meal");
+    
+    get_meal_btn.addEventListener("click", () => {
+        fetch("https://www.themealdb.com/api/json/v1/1/random.php")
+            .then((res) => res.json())
+            .then((res) => {
+                createMeal(res.meals[0]);
+            });
+    });
+    
+    const createMeal = (meal) => {
+        const ingredients = [];
+        for (let i = 1; i <= 20; i++) {
+            if (meal[`strIngredient${i}`]) {
+                ingredients.push(`${meal[`strIngredient${i}`]} - ${meal[`strMeasure${i}`]}`);
+            } else {
+                // Stop if no more ingredients
+                break;
+            }
+        }
+    
+        const newInnerHTML = `
+            <div class="row">
+                <div class="columns five">
+                 
+                    ${
+                        meal.strCategory
+                           ? ` `
+                           : ""
+                   }
+                    ${meal.strArea ? ` ` : ""}
+                    ${
+                      meal.strTags
+                         ? ` `
+                          : ""
+                  }
+
+
+                    <div class ="ingredients">
+
+                    <div class ="box-1">
+
+
+                        <div class="ingredientsDiv">
+                            <h4>${meal.strMeal}</h4>
+                        <h5 style="font-weight:100;">Ingredients</h5>
+                        <ul>
+                            
+                            ${ingredients.map((ingredient) => `<li>${ingredient}</li>`).join("")}
+                        </ul>
+
+                    </div>
+                    </div>
+
+                    <div class="box-2">
+                       
+                        <p class="RecipeInstuctions">${meal.strInstructions}</p>
+                    
+
+                </div>
+
+                 <div class="box-3">
+                    <img src="${meal.strMealThumb}" alt="Meal Image">
+                 </div>
+                
+                 
+                </div>
+                
+                    <h4 class="DishName">${meal.strMeal}</h4>
+                   
+                
+            </div>
+
+            
+            
+            ${
+                meal.strYoutube
+                    ? `
+             `
+                    : ""
+            }
+        `;
+    
+        meal_container.innerHTML = newInnerHTML;
+    };
+    
+    
+    
+    const menuToggle = document.querySelector('.toggle');
+    const showcase = document.querySelector('.showcase');
+
+    menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    showcase.classList.toggle('active');
+    });
+
+    window.addEventListener('scroll', reveal);
+
+    function reveal(){
+    let reveals = document.querySelectorAll('.reveal');
+
+    for(let i = 0; i < reveals.length; i++){
+        let windowheight = window.innerHeight;
+        let revealtop = reveals[i].getBoundingClientRect().top
+        let revealpoint = 150;
+
+        if(revealtop < windowheight - revealpoint){
+            reveals[i].classList.add('active');
+
+        }else{
+            reveals[i].classList.remove('active');
+        }
+    }
+}
+
+
+
+function loadUrl(){
+    document.getElementById("scrolldown").scrollIntoView();
+  }
+
+
+</script>
+</html>
