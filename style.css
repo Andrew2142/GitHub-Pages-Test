@@ -21,6 +21,11 @@ html,body
 ul li::marker {
     content: "";
   }
+
+
+  .ingredientsDiv h4{
+      display:none;
+  }
   
   
   img{
@@ -131,13 +136,14 @@ header .logo {
 }
 
 .showcase {
+
     position: relative;
     right: 0;
     width: 100%;
     min-height: 100vh;
     padding: 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background: #111;
     transition: 0.5s;
@@ -174,9 +180,12 @@ header .logo {
 
 .text {
     position: relative;
-    padding-top: 27vh;
     z-index: 10;
-padding-left: 58vh;}
+    padding:0;
+    margin:0;
+    margin-top:150px;
+    text-align:center;
+}
 
 .text h2 {
     font-size: 4em;
@@ -187,7 +196,9 @@ padding-left: 58vh;}
 }
 
 .text h3 {
-        padding-left:20%;
+    padding:0;
+    margin:0;
+    text-align: center;
     font-size: 3em;
     font-weight: 300;
     color: #00a2c7;
@@ -197,6 +208,8 @@ padding-left: 58vh;}
 }
 
 .text p {
+    padding:0;
+
     font-size: 1.1em;
     color: #fff;
     margin: 20px 0;
@@ -205,6 +218,7 @@ padding-left: 58vh;}
 }
 
 .text a {
+    text-align: center;
     margin-left: 38%;
     display: inline-block;
     font-size: 1em;
@@ -217,7 +231,9 @@ padding-left: 58vh;}
     color: #111;
     letter-spacing: 2px;
     transition: 0.2s;
-border-radius: 10px;}
+    border-radius: 10px;
+    margin:0 !important;
+}
 
 .text a:hover {
     
