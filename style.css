@@ -21,7 +21,7 @@ h2.logoName {
     font-size: 250%;
     padding-left: 70px;
     font-weight:500;
-    color:#52668b;}
+    color: #8fbb23;}
 
 
 
@@ -219,7 +219,7 @@ header .logo {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.9;
+    opacity: .7;
 }
 
 .overlay {
@@ -229,7 +229,7 @@ header .logo {
     width: 100%;
     height: 100%;
     background: #0054a3;
-    opacity: 20%;
+    opacity: 40%;
     mix-blend-mode: overlay;
    
      
@@ -258,7 +258,7 @@ header .logo {
     text-align: center;
     font-size: 3em;
     font-weight: 300;
-    color: #465052;
+    color: #4f6887;
     line-height: 1em;
     text-transform: uppercase;
     
