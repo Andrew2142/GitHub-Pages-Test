@@ -535,7 +535,7 @@ html { scroll-behavior: smooth;
 }
 
 
-@media (min-width: 600px ){
+@media (min-width: 850px ){
 
     .showcase,
     .showcase header {
