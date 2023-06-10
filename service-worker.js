@@ -2,19 +2,19 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
       caches.open('my-cache').then(function(cache) {
         return cache.addAll([
-          '/close.png',
-          '/download.png',
-          '/explore.mp4',
-          '/facebook.png',
-          '/logo.jpg',
-          '/logo.png',
-          '/logoblack.png',
-          '/Logowhite.png',
-          '/main.css',
-          '/manifest.json',
-          '/menu.svg',
-          '/style.css',
-          '/x.svg'
+          'close.png',
+          'download.png',
+          'explore.mp4',
+          'facebook.png',
+          'logo.jpg',
+          'logo.png',
+          'logoblack.png',
+          'Logowhite.png',
+          'main.css',
+          'manifest.json',
+          'menu.svg',
+          'style.css',
+          'x.svg'
           // Add more assets to cache as needed
         ]);
       })
