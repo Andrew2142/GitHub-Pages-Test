@@ -14,7 +14,8 @@ self.addEventListener('install', function(event) {
           'manifest.json',
           'menu.svg',
           'style.css',
-          'x.svg'
+          'x.svg',
+          'service-worker.js'
           // Add more assets to cache as needed
         ]);
       })

@@ -1,6 +1,6 @@
 {
-    "name": "Foodify",
-    "short_name": "Foodify",
-    "description": "Recipe App",
-    "start_url": "/blue.github.io/"
-  }
+  "name": "Foodify",
+  "short_name": "Foodify",
+  "description": "Recipe App",
+  "start_url": "/"
+}
