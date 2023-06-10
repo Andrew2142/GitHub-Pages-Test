@@ -2,19 +2,19 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
       caches.open('my-cache').then(function(cache) {
         return cache.addAll([
-          'close.png',
-          'download.png',
-          'explore.mp4',
-          'facebook.png',
-          'logo.jpg',
-          'logo.png',
-          'logoblack.png',
-          'Logowhite.png',
-          'main.css',
-          'manifest.json',
-          'menu.svg',
-          'style.css',
-          'x.svg'
+          '/close.png',
+          '/download.png',
+          '/explore.mp4',
+          '/facebook.png',
+          '/logo.jpg',
+          '/logo.png',
+          '/logoblack.png',
+          '/Logowhite.png',
+          '/main.css',
+          '/manifest.json',
+          '/menu.svg',
+          '/style.css',
+          '/x.svg'
           // Add more assets to cache as needed
         ]);
       })
@@ -22,7 +22,7 @@ self.addEventListener('install', function(event) {
   });
   
   self.addEventListener('fetch', function(event) {
-    if (event.request.url.endsWith('/index.html')) {
+    if (event.request.url.endsWith('/blue.github.io/index.html')) {
       event.respondWith(
         caches.match(event.request).then(function(response) {
           return response || fetch(event.request).then(function(fetchResponse) {
@@ -38,7 +38,7 @@ self.addEventListener('install', function(event) {
     // ... Handle other requests for assets, stylesheets, images, etc.
   });
 
-  
+
   self.addEventListener('activate', function(event) {
     event.waitUntil(
       // Perform any necessary activation tasks
