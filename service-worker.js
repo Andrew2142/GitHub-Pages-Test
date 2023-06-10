@@ -2,10 +2,10 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
       caches.open('my-cache').then(function(cache) {
         return cache.addAll([
-          '/close.png',
-          '/download.png',
-          '/explore.mp4',
-          '/facebook.png',
+          'close.png',
+          'download.png',
+          'explore.mp4',
+          'facebook.png',
           'logo.jpg',
           'logo.png',
           'logoblack.png',
