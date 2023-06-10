@@ -37,3 +37,23 @@ self.addEventListener('install', function(event) {
     }
     // ... Handle other requests for assets, stylesheets, images, etc.
   });
+
+  
+  self.addEventListener('activate', function(event) {
+    event.waitUntil(
+      // Perform any necessary activation tasks
+      // such as cleaning up old caches or other resources
+      caches.keys().then(function(cacheNames) {
+        return Promise.all(
+          cacheNames.filter(function(cacheName) {
+            // Filter out the caches you want to delete
+            // For example, you can delete all caches except the current one
+            return cacheName !== 'my-cache';
+          }).map(function(cacheName) {
+            // Delete the caches
+            return caches.delete(cacheName);
+          })
+        );
+      })
+    );
+  });
