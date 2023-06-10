@@ -6,38 +6,8 @@
   "display": "fullscreen",
   "icons": [
     {
-      "src": "close.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    },
-    {
-      "src": "download.png",
-      "sizes": "225x225",
-      "type": "image/png"
-    },
-    {
-      "src": "facebook.png",
-      "sizes": "200x200",
-      "type": "image/png"
-    },
-    {
-      "src": "logo.jpg",
-      "sizes": "199x63",
-      "type": "image/jpg"
-    },
-    {
       "src": "logo.png",
       "sizes": "254x123",
-      "type": "image/png"
-    },
-    {
-      "src": "logoblack.png",
-      "sizes": "190x49",
-      "type": "image/png"
-    },
-    {
-      "src": "Logowhite.png",
-      "sizes": "200x114",
       "type": "image/png"
     }
   ]
