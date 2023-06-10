@@ -18,6 +18,18 @@
       <link href="script.js" rel="script" />
       <link rel="icon" type="image/x-icon" href="logo.png">
       <script src="https://kit.fontawesome.com/eb54cc5c7b.js" crossorigin="anonymous"></script>
+        <link rel="manifest" href="manifest.json">
+        <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+            .then(function(registration) {
+                console.log('Service Worker registered');
+            })
+            .catch(function(error) {
+                console.log('Service Worker registration failed:', error);
+            });
+        }
+        </script>
    </head>
    <body>
 
@@ -202,7 +214,6 @@
           const newInnerHTML = `
               <div class="row">
                   <div class="columns five">
-                   
                       ${
                           meal.strCategory
                              ? ` `
@@ -214,45 +225,26 @@
                            ? ` `
                             : ""
                     }
-      
-      
                       <div class ="ingredients">
-      
                       <div class ="box-1">
-      
-      
                           <div class="ingredientsDiv">
                               <h4>${meal.strMeal}</h4>
                           <h5 style="font-weight:100;">Ingredients</h5>
-                          <ul>
-                              
+                          <ul>                  
                               ${ingredients.map((ingredient) => `<li>${ingredient}</li>`).join("")}
                           </ul>
       
                       </div>
                       </div>
-      
-                      <div class="box-2">
-                         
+                      <div class="box-2">                
                           <p class="RecipeInstuctions">${meal.strInstructions}</p>
-                      
-      
                   </div>
-      
                    <div class="box-3">
                       <img src="${meal.strMealThumb}" alt="Meal Image">
-                   </div>
-                  
-                   
-                  </div>
-                  
-                      <h4 class="DishName">${meal.strMeal}</h4>
-                     
-                  
-              </div>
-      
-              
-              
+                   </div>         
+                  </div>         
+                      <h4 class="DishName">${meal.strMeal}</h4>                                 
+              </div>          
               ${
                   meal.strYoutube
                       ? `
