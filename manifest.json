@@ -3,6 +3,7 @@
   "short_name": "Foodify",
   "description": "Recipe App",
   "start_url": "/",
+  "display": "fullscreen",
   "icons": [
     {
       "src": "close.png",
