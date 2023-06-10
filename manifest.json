@@ -2,7 +2,7 @@
   "name": "Foodify",
   "short_name": "Foodify",
   "description": "Recipe App",
-  "start_url": "/",
+  "start_url": "/blue.github.io",
   "display": "fullscreen",
   "icons": [
     {
